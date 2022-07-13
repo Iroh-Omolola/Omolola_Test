@@ -27,6 +27,7 @@
   border: none;
   text-indent: 54px;
   font-size: 15px;
+  margin-bottom: 30px;
 }
 
 .custom-select-wrapper .input-wrapper input[type="text"] {

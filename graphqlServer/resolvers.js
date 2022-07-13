@@ -3,27 +3,29 @@ const Query = {
   greeting: () => "Introduction to graphQl!",
   myName: (root, args) => myNameMethod(args.name),
   transaction: () => db.transactions.list(),
-  transactionByID: (root, args) => transactionByID(root, args),
   searchTransaction: (root, args) => searchTransaction(root, args),
 };
 
 const myNameMethod = (name) => `Hello ${name}, welcome to graphQl!`;
 
-const transactionByID = (root, { ID }) => db.transactions.get(ID);
-
-const searchTransaction = (root, { query }) => {
+const searchTransaction = (root, { input }) => {
   const transactions = db.transactions.list();
-  const filteredTransactions = transactions.filter((transaction) => {
-    return (
-      transaction.ID.toLowerCase().includes(query.toLowerCase()) ||
-      transaction.Name.toLowerCase().includes(query.toLowerCase()) ||
-      transaction.Date.toLowerCase().includes(query.toLowerCase()) ||
-      transaction.Sex.toLowerCase().includes(query.toLowerCase()) ||
-      transaction.Status.toLowerCase().includes(query.toLowerCase())
-    );
-  });
+  const shouldApplyQueryFilter = input.query !== null;
 
-  return filteredTransactions;
+  if (shouldApplyQueryFilter) {
+    const filteredTransaction = transactions.filter((transaction) => {
+      return (
+        transaction.ID.toLowerCase().includes(input.query.toLowerCase()) ||
+        transaction.Name.toLowerCase().includes(input.query.toLowerCase()) ||
+        transaction.Date.toLowerCase().includes(input.query.toLowerCase()) ||
+        transaction.Sex.toLowerCase().includes(input.query.toLowerCase()) ||
+        transaction.Status.toLowerCase().includes(input.query.toLowerCase())
+      );
+    });
+
+    return filteredTransaction;
+  }
+  return transactions
 };
 
 module.exports = {

@@ -2,38 +2,43 @@ import React, { useEffect, useState } from "react";
 import "../css/result.css";
 import { useQuery, gql } from "@apollo/client";
 import moment from "moment";
-
 import SearchBar from "../component/search";
 import FilterBar from "../component/filter";
 import ContentLoader from "../component/Loader";
 
 const ResultData = () => {
   const [searchData, setSearchData] = useState("");
+  const [searchDataOne, setSearchDataOne] = useState("");
+  const [searchDataTwo, setSearchDataTwo] = useState("");
   const [resultData, setResultData] = useState(null);
 
   const GET_TRANSACTIONS = gql`
-  query {
-    transactions: searchTransaction(query:"${searchData}") {
-      ID
-      Name
-      Date
-      Status
-      Sex
+    query {
+      transactions: searchTransaction(
+        input: { query: "${searchData}", sexQuery: "", statusQuery: "" }
+      ) {
+        ID
+        Name
+        Date
+        Status
+        Sex
+      }
     }
-  }
-`;
+  `;
+
 
   const onSearchChange = (e) => {
     setSearchData(e.target.value);
   };
   const onSelectOne = (e) => {
-    setResultData(e.target.value);
+    setSearchDataOne(e.target.value);
   };
+
   const onSelectTwo = (e) => {
-    setSearchData(e.target.value);
+    setSearchDataTwo(e.target.value);
   };
   const { loading, data } = useQuery(GET_TRANSACTIONS);
-
+console.log("===", data)
   useEffect(() => {
     const groups = data?.transactions.reduce((groups, user) => {
       const date = user.Date;
