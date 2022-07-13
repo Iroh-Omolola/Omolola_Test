@@ -15,7 +15,7 @@ const ResultData = () => {
   const GET_TRANSACTIONS = gql`
     query {
       transactions: searchTransaction(
-        input: { query: "${searchData}", sexQuery: "", statusQuery: "" }
+        input: { query: "${searchData}", sexQuery: "${searchDataOne}", statusQuery: "${searchDataTwo}" }
       ) {
         ID
         Name
