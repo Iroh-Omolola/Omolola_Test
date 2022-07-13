@@ -1,0 +1,142 @@
+[
+  {
+    "Date": "2020-01-01",
+    "ID": "c99996dc",
+    "Name": "Deji Omoloja",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-01",
+    "ID": "23fd730e",
+    "Name": "Afolabi Banwo",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-01",
+    "ID": "e3ff730e",
+    "Name": "Toheeb Yekinni",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-02",
+    "ID": "23fe7f0e",
+    "Name": "Tosin Rotimi",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-02",
+    "ID": "23ed830e",
+    "Name": "Pelumi Oluwapelumi",
+    "Status": "offline",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-02",
+    "ID": "23gh3ge",
+    "Name": "Nifemi Rasheed",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-03",
+    "ID": "r3ed7r0e",
+    "Name": "Adeyemi Emmanuel",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-03",
+    "ID": "23fh7f0e",
+    "Name": "Iroh Omolola",
+    "Status": "online",
+    "Sex": "female"
+  },
+  {
+    "Date": "2020-01-03",
+    "ID": "23fd730e",
+    "Name": "Stella Angel",
+    "Status": "online",
+    "Sex": "female"
+  },
+  {
+    "Date": "2020-01-04",
+    "ID": "r3fet30e",
+    "Name": "Jessie Eloma",
+    "Status": "offline",
+    "Sex": "female"
+  },
+  {
+    "Date": "2020-01-04",
+    "ID": "r3fd930e",
+    "Name": "Rachael Akhere",
+    "Status": "offline",
+    "Sex": "female"
+  },
+  {
+    "Date": "2020-01-04",
+    "ID": "25fd430e",
+    "Name": "Rita Dominic",
+    "Status": "offline",
+    "Sex": "female"
+  },
+  {
+    "Date": "2020-01-05",
+    "ID": "237d7g0e",
+    "Name": "Helen Ormie",
+    "Status": "online",
+    "Sex": "female"
+  },
+  {
+    "Date": "2020-01-06",
+    "ID": "23te730e",
+    "Name": "Emmanuel Omawumi",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-06",
+    "ID": "93ff700e",
+    "Name": "Michael Aina",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-07",
+    "ID": "13fd550e",
+    "Name": "Richmond Ade",
+    "Status": "offline",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-07",
+    "ID": "23fy7z0e",
+    "Name": "John Simeon",
+    "Status": "offline",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-08",
+    "ID": "29fd7td0e",
+    "Name": "Damilola Olorunwa",
+    "Status": "offline",
+    "Sex": "female"
+  },
+  {
+    "Date": "2020-01-08",
+    "ID": "25xd780e",
+    "Name": "Ramzy Tim",
+    "Status": "online",
+    "Sex": "male"
+  },
+  {
+    "Date": "2020-01-09",
+    "ID": "73qm730e",
+    "Name": "Mark Thom",
+    "Status": "online",
+    "Sex": "male"
+  }
+]

@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+.App {
+  margin-top: 50px;
+  text-align: center;
+}
+.App h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: #444444;
+}
+.App-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.main-app {
+  margin-top: 70px;
+}
+@media only screen and (max-width: 600px) {
+  .App h1 {
+    font-size: 40px;
+  }
+}

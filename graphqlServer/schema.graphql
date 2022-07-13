@@ -1,0 +1,17 @@
+type Query {
+  greeting: String
+  myName(name: String): String
+  transaction: [Transaction]
+  transactionByID(id: ID!): Transaction
+  searchTransaction(query: String!): [Transaction]
+  filterTransaction(filter: String!): [Transaction]
+}
+
+type Transaction {
+  ID: ID!
+  Status: String
+  Date: String
+  Name: String
+  Sex: String
+  # ID, Status, Date, Name, and Sex. 
+}
