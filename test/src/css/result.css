@@ -57,6 +57,7 @@
   font-weight: 400;
 }
 .no-text {
+  color: #444444;
   text-align: center;
   font-size: 30px;
 }
