@@ -14,4 +14,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
+Apollo Client was used to consume the GraphQl api.
+
+
+To enable the functionality of the app to work, the server must be running.
+
 <img width="1217" alt="Screenshot 2022-07-13 at 17 09 21" src="https://user-images.githubusercontent.com/69275205/178780708-fd543a79-d3f9-4848-af0d-1902d73b8d77.png">

@@ -9,11 +9,18 @@ const Query = {
 const myNameMethod = (name) => `Hello ${name}, welcome to graphQl!`;
 
 const searchTransaction = (root, { input }) => {
-  const transactions = db.transactions.list();
+  let transactions = db.transactions.list();
   const shouldApplyQueryFilter = input.query !== null;
-
+  const shouldApplySexFilter = input.sexQuery !== "";
+  const shouldApplyStatusFilter = input.statusQuery !== "";
+ if (shouldApplySexFilter) {
+   transactions=transactions.filter((a) => a.Sex == input.sexQuery);
+ }
+  if (shouldApplyStatusFilter) {
+    transactions = transactions.filter((a) => a.Status == input.statusQuery);
+  }
   if (shouldApplyQueryFilter) {
-    const filteredTransaction = transactions.filter((transaction) => {
+    transactions =transactions.filter((transaction) => {
       return (
         transaction.ID.toLowerCase().includes(input.query.toLowerCase()) ||
         transaction.Name.toLowerCase().includes(input.query.toLowerCase()) ||
@@ -22,9 +29,8 @@ const searchTransaction = (root, { input }) => {
         transaction.Status.toLowerCase().includes(input.query.toLowerCase())
       );
     });
-
-    return filteredTransaction;
   }
+
   return transactions
 };
 

@@ -38,7 +38,6 @@ const ResultData = () => {
     setSearchDataTwo(e.target.value);
   };
   const { loading, data } = useQuery(GET_TRANSACTIONS);
-console.log("===", data)
   useEffect(() => {
     const groups = data?.transactions.reduce((groups, user) => {
       const date = user.Date;
@@ -69,13 +68,13 @@ console.log("===", data)
         <div className="result">
           <div className="result-details">
             {resultData?.length > 0 ? (
-              resultData?.map((data) => (
-                <div>
+              resultData?.map((data,index) => (
+                <div key={index+1}>
                   <h6 className="date-details">
                     {moment(data?.date).format("MMMM Do YYYY")}
                   </h6>
                   {data?.user?.map((userData) => (
-                    <div className="user-data">
+                    <div className="user-data" key={userData?.ID}>
                       <div>
                         <div className="user-details">
                           <div className="user-id">
